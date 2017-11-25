@@ -23,7 +23,7 @@ export class ChildOneComponent implements OnInit {
   @Input('studentAddMsg')
   addMsg: string;
 
-  @Output('addStudentEvent')
+  @Output()
   addStdEvent = new EventEmitter<Student>();
 
   @Output()
