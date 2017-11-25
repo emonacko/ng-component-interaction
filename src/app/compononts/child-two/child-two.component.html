@@ -1,0 +1,33 @@
+<h3 class="text-center">{{childTitle}}</h3>
+
+<div class="card">
+  <div class="card-header">
+    {{studentMsg}}
+  </div>
+  <div class="card-body">
+    {{myStdLeader.fname +' '+ myStdLeader.lname}}
+  </div>
+</div>
+<br>
+
+
+<div class="card">
+  <div class="card-header">
+    {{addNumMsg}}
+  </div>
+  <div class="card-body">
+    <form>
+      <div class="form-group">
+        <label for="firstNumber">First Number</label>
+        <input type="number" (input)="num1=$event.target.value" class="form-control" id="firstNumber" aria-describedby="firstNumberHelp" placeholder="Enter first Name">
+        <small id="firstNumberHelp" class="form-text text-muted">Enter your first number.</small>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Second Number</label>
+        <input type="number" (input)="num2=$event.target.value" class="form-control" id="lastName" aria-describedby="secondNumberHelp" placeholder="Enter second number">
+        <small id="secondNumberHelp" class="form-text text-muted">Enter your second number.</small>
+      </div>
+      <button type="button" class="btn btn-primary" (click)="addNumber()">Add Number</button>
+    </form>
+  </div>
+</div>
